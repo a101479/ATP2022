@@ -1,0 +1,53 @@
+#HUMANO PENSA NUM NUMERO
+import random
+
+def randlim(a,b):
+    limitado = random.randint(a,b)
+    return limitado
+
+limsup = 100
+liminf = 0
+soma = 1
+pc = random.randint(1,100)
+eu = int(input("Escolha o seu numero secreto: "))
+print("O seu numero é", eu)
+print("O numero do computador é", pc)
+while eu != pc:
+    guess = input("O seu numero é maior ou menor? ")
+    if guess == "maior":
+        liminf = pc +1
+    else:
+        liminf = liminf
+    if guess == "menor":
+        limsup = pc-1
+    else:
+        liminf = liminf
+    pc = randlim(liminf,limsup)
+    print(pc)
+    soma = soma + 1
+print("PARABENS")
+print("Foram precisas",soma, "tentativas para adivinhar o numero")
+
+
+
+
+
+
+
+#PC PENSA NUM NUMERO
+import random
+
+soma = 1
+pc = random.randint(1,100)
+eu = int(input("Tente adivinhar o numero do computador: \n"))
+print("TENTOU", eu)
+while eu != pc:
+    soma = soma + 1
+    if eu > pc:
+        print ("O seu numero é maior que o do computador")
+    if eu < pc:
+        print ("O seu numero é menor que o do computador")
+    eu = int(input("Tente novamente: "))
+    print("TENTOU", eu)
+print("PARABENS")
+print("Foram precisas",soma, "tentativas para adivinhar o numero")

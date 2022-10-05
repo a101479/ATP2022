@@ -1,0 +1,166 @@
+import random
+global interna
+interna = "interna"
+
+def criarlista():
+    global interna
+    print(1)
+    lista = []
+    N = 100
+    i = 0
+    while N != 0:
+        i = random.randint(1, 100)
+        lista.append(i)
+        N -= 1
+    print(lista)
+    if interna != "interna":
+        print("a sua lista antiga será substituida")
+    interna = lista
+    print("a sua nova lista foi guardada")
+    print("\n")
+
+def lerlista():
+    global interna
+    print(2)
+    lista = []
+    N = int(input("Quantos elementos terá a sua lista? "))
+    print("escolha os seus numeros")
+    cont = 0
+    while N != 0:
+        cont += 1
+        i = int(input("--> "))
+        lista.append(i)
+        N -= 1
+    print(lista)
+    if interna != "interna":
+        print("a sua lista antiga será substituida")
+    interna = lista
+    print("a sua nova lista foi guardada")
+    print("\n")
+
+def soma():
+    global interna
+    print(3)
+    soma = 0
+    for i in interna:
+        soma += i
+    print("a soma de todos os elementos da sua lista é ", soma)
+    print("\n")
+
+def media():
+    global interna
+    print(4)
+    media = 0
+    for i in interna:
+        media += i
+    tamanho = len(interna)
+    media = media/tamanho
+    print("a média de todos os elementos da sua lista é ", media)
+    print("\n")
+
+def maior():
+    global interna
+    print(5)
+    maior = interna[0]
+    for i in interna:
+        if i > maior:
+            maior = i
+    print("o maior de todos os elementos da sua lista é ", maior)
+    print("\n")
+
+def menor():
+    global interna
+    print(6)
+    menor = interna[0]
+    for i in interna:
+        if i < menor:
+            menor = i
+    print("o menor de todos os elementos da sua lista é ", menor)
+    print("\n")
+
+def ordemcresc():
+    global interna
+    print(7)
+    maior = interna[0]
+    var = True
+    for i in interna:
+        if i < maior:
+            var = False
+        maior = i
+    if var == True:
+        print("SIM")
+    else:
+        print("NÃO")
+    print("\n")
+
+def ordemdecresc():
+    global interna
+    print(8)
+    menor = interna[0]
+    var = True
+    for i in interna:
+        if i > menor:
+            var = False
+        menor = i
+    if var == True:
+        print("SIM")
+    else:
+        print("NÃO")
+    print("\n")
+
+def procurar():
+    global interna
+    print(9)
+    elem = int(input("Qual o número que pretende procurar na sua lista? "))
+    var = False
+    cont = 0
+    text = ""
+    for i in interna:
+        if i == elem:
+            var = True
+    if var == True:
+        var = False
+        while var != True:
+            for i in interna:
+                cont += 1
+                if i == elem:
+                    var = True
+                    text = text + str(cont) + "º elemento da sua lista, ou seja LISTA[" + str(cont - 1) + "]\n"
+        print(text)
+    else:
+        ("o seu número não existe na lista")
+
+escolha = "escolha"
+
+while escolha != 0:
+    escolha = int(input("""(1)Criar Lista
+(2)Ler Lista
+(3)Soma
+(4)Media
+(5)Maior
+(6)Menor
+(7)Está ordenado por ordem crescente?
+(8)Está ordenado por ordem decrescente?
+(9)Procurar um elemento
+(0)SAIR
+O que pretende fazer? """))
+    print("\n")
+    if escolha == 1:
+        criarlista()
+    if escolha == 2:
+        lerlista()
+    if escolha == 3:
+        soma()
+    if escolha == 4:
+        media()
+    if escolha == 5:
+        maior()
+    if escolha == 6:
+        menor()
+    if escolha == 7:
+        ordemcresc()
+    if escolha == 8:
+        ordemdecresc()
+    if escolha == 9:
+        procurar()
+print("Programa terminado")

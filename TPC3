@@ -128,7 +128,8 @@ def procurar():
                     text = text + str(cont) + "º elemento da sua lista, ou seja LISTA[" + str(cont - 1) + "]\n"
         print(text)
     else:
-        ("o seu número não existe na lista")
+        print("o seu número não existe na lista")
+    print("\n")
 
 escolha = "escolha"
 

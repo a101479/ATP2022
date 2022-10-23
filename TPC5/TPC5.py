@@ -161,10 +161,10 @@ def graficar(LISTAO):
                 y.append(lista[-1])
             print(x,y)
             if i == 0:
-                plt.plot(x, y, color='white', linestyle='dashed', linewidth=1, marker='o', markerfacecolor='green',
+                plt.plot(x, y, color='white', linestyle='dashed', linewidth=1, marker='o', markerfacecolor='orange',
                          markersize=10)
             else:
-                plt.plot(x, y, color='white', linestyle='dashed', linewidth=1, marker='o', markerfacecolor='orange',
+                plt.plot(x, y, color='white', linestyle='dashed', linewidth=1, marker='o', markerfacecolor='green',
                          markersize=10)
             for lista in listadelistas:
                 if lista[-1] > max:

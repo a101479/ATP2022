@@ -108,14 +108,6 @@ print(figuais("f1.txt","f2.txt"))
 print("\n")
 
 
-# Cinemateca = [Filme]
-# Pub = (Título, Ano, Elenco, Géneros)
-# Título = String
-# Ano = Int
-# Elenco = [Ator]
-# Ator = String
-# Géneros = [Género]
-# Género = String
 Filme1 = ("Meet the Parents", 2000, ["Ben Stiller","Robert De Niro","Blythe Danner","Teri Polo","Owen Wilson"], ["Comedy", "Drama"])
 Filme2 = ("Men of Honor", 2000, ["Robert De Niro","Cuba Gooding, Jr.","Charlize Theron"], ["Biography", "Drama", "Thriller"])
 Filme3 = ("Analyze That", 2002, ["Robert De Niro","Billy Crystal","Lisa Kudrow"], ["Comedy"])
